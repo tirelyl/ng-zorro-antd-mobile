@@ -125,7 +125,7 @@ function generatingPublishNote() {
 function preRelease() {
   // FIXME: No command line output???
   log.info('Running pre-release script... Be patient...');
-  execSync('npm run pre-release');
+  execSync('npm run pre-release', { stdio: [0, 1, 2] });
   log.info('pre-release completed!');
 }
 
